@@ -1,0 +1,21 @@
+Problem #1     Block System call : 
+block system call for date command 
+that means you don't have to uninstall date command but if you run kernel must not accept 
+do the same Firefox as well
+
+*Trying to read the doc of system call and restricted file, but didn't get anything properly 
+ but still trying
+
+Problem #2 :  play with directory 
+
+  create a directory without name from command line
+  create a directory with name "-okgoogle"
+  
+  solution: it is impossibe to create a dir without name or character so i create a a directory with the Unicode empty characters
+            1. mkdir U+00A0      
+            * Note:- to use unicode in linux we use (ctrl+shift+u)
+                     U+00A0   is for *No-Break Space*
+            2. getting invalid option error by creating dir with the name -okgoogle. to overcome this situation we use -- before name 
+               mkdir -- -okgoogle 
+               * Note:- we use -- to disable further option parsing
+                (source : https://stackoverflow.com/questions/19521184/make-directory-with-leading-hyphen)
