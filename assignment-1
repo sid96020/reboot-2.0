@@ -19,3 +19,12 @@ Problem #2 :  play with directory
                mkdir -- -okgoogle 
                * Note:- we use -- to disable further option parsing
                 (source : https://stackoverflow.com/questions/19521184/make-directory-with-leading-hyphen)
+                
+                
+                
+Problem #3 :  create a directory structure 
+
+
+Note :   You are only allowed to use a single command and only one time
+
+solution: mkdir -p A/{B/{G/K/Reboot.txt,H/I/Reboot.txt},C/{I/J/Reboot.txt,J/L/Reboot.txt},D/{F/L/Reboot.txt,E/M/Reboot.txt}}
