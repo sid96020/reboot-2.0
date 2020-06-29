@@ -24,7 +24,35 @@ Problem #2 :  play with directory
                 
 Problem #3 :  create a directory structure 
 
-
 Note :   You are only allowed to use a single command and only one time
-
 solution: mkdir -p A/{B/{G/K/Reboot.txt,H/I/Reboot.txt},C/{I/J/Reboot.txt,J/L/Reboot.txt},D/{F/L/Reboot.txt,E/M/Reboot.txt}}
+
+
+Problem #4.  share and files and folder 
+
+
+     create two users name jack and Jill  from command line
+    create all the data under home directory of each users 
+    login with jack user and create a file name  jack.txt using vim editor and write "hello jack"
+    from jack user also create two directories name jack1 & jack2 
+    now login from Jill user and create a file. Jill.txt using vim editor and write "hey jiil"
+    from Jill also create two directoires named jill1 & jill2 
+
+
+Important :  swap these files and directories in between users  and to swap don't use root account.
+
+solution: steps to do the task:-
+          1. useradd jill         #to add user
+          2. passwd jill          # set password for the user
+          3. useradd jack         
+          4. passwd jack
+          5. su jill               #switc user
+          6. chmod 777 /home/jill   #provide complete access to the jill home directory for everyone
+          7. mdkir /home/jill/jill1 jill2    
+          8. vim /home/jill/jill.txt
+          9. su jack                 
+          10. chmod 777 /home/jack     #provide complete access to the jack home directory for everyone
+          11. mv /home/jill/* /home/jack    # move all the files and from jill home dir to jack home dir 
+          12. you can do the same for jack as well 
+          
+          Note:- stll finding the better approach to do this task. 
