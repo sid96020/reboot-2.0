@@ -56,3 +56,30 @@ solution: steps to do the task:-
           12. you can do the same for jack as well 
           
           Note:- stll finding the better approach to do this task. 
+
+
+Problem #5 :  play with files and directories 
+
+  create  3 files named   abc.txt  ok  fine  g.txt  /tmp directory 
+  create  4  directories   aa aaa aaaa  under  /tmp directory 
+  give ls command to  list the content of  /tmp directory 
+  make sure it will only list the content (file|directory)  having 2 char in their name
+  
+ Solution: *cd /tmp
+           *touch abc.txt ok\ fine g.txt
+           *mkdir a aa aaa aaaa
+           *ls -d ??    (-d is used to tell ls to give focus on the parent directory and ?? represent file or directory which contain only have two characters)
+                              or 
+           * ls /tmp |grep -e '^.\{2\}$' (you can use this regular expression also to find file or dir which has only two characters)
+           
+           
+           
+problem #6:  run command without any output 
+
+  open terminal and type any command 
+  once you press enter your output of given command must not  print
+  you are not allowed to redirect output anywhere 
+  
+solution: bash -dump-strings (it transfer you to a new enviroment where you enter any command it didnt execute  it get stdout only when string prefix with $ and double quoted )
+
+          Note ( still cant able to find any proper solution beacuse all the solution in the google are related to redirection)
