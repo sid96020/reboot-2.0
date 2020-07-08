@@ -83,3 +83,26 @@ problem #6:  run command without any output
 solution: bash -dump-strings (it transfer you to a new enviroment where you enter any command it didnt execute  it get stdout only when string prefix with $ and double quoted )
 
           Note ( still cant able to find any proper solution beacuse all the solution in the google are related to redirection)
+
+problem #7 :    create a shell script 
+
+     create a shell script named /root/delvex.sh 
+      make sure it will run /bin/sh shell 
+      a user will be running this script my using a command name opensource
+     when a user  run like  "opensource  time" it must give current time only
+    when it runs like "opensource user"  it will give list of interactive shell users only
+     when run like "opensource 100"  it must print "Hello Delvex" 100 times in interval of 1 sec
+    if runs like  "opensource windows"  then it must shutdown OS
+    if run opensource command without any parameter  then it must show out --
+
+             i)   name of kernel 
+             ii)   version of kernel 
+             iii)  current date in the format of  /DD/MM/YY
+             iv)  name of OS 
+             v)   last reboot time 
+ 
+ Note:    each output for last option must be in a separate line 
+ 
+ solution: I created a script file named delvex.sh (file is uploaded in my github repo)
+           * alias opensource = "/root/delvex.sh"  (so we can call the script with the opensource command)
+           * copy the above code in .bashrc file
